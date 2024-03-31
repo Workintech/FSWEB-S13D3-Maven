@@ -27,4 +27,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Run specific tests
+      run: mvn -B test -Dtest=MainTest,ResultAnalyzer --file pom.xml
+
 
